@@ -14,7 +14,7 @@ const gridTemplateLargeScreens=`
     "g h i"
     "g h j"
     "g h j"
-`
+`;
 const gridTemplateSmallScreens=`
     "a"
     "a"
@@ -46,24 +46,25 @@ const gridTemplateSmallScreens=`
     "i"
     "j"
     "j"
-`
+`;
 const Dashboard=() => { 
-    const isAboveMediumScreens=useMediaQuery("(min-width:1200px)")
+    const isAboveMediumScreens=useMediaQuery("(min-width: 1200px)")
     return(
         <Box 
             width="100%"
-            height="100%"
+            height="140vh"
             display="grid"
-            gap="1.5rem"
+            gap="2rem"
             sx={
                 isAboveMediumScreens ? {
-                    gridTemplateColumns:"repeat(3, minmax(370px, 1fr))",
-                    gridTemplateRows:"repeat(10, minmax(60px, ifr))",
+                    gridTemplateColumns:"repeat(3, minmax(380px, 1fr))",
+                    gridTemplateRows:"repeat(10, minmax(60px, 1fr))",
                     gridTemplateAreas:gridTemplateLargeScreens,
                 } : {
                     gridAutoColumns:"1fr",
                     gridAutoRows:"80px",
                     gridTemplateAreas:gridTemplateSmallScreens,
+                    height:"428.5vh" 
                 }
             }
         >
