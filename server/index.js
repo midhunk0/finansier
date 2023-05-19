@@ -39,9 +39,9 @@ mongoose
     .then(async ()=>{
         app.listen(PORT,()=>console.log(`Server Port:${PORT}`));
         //add data one time only or as needed
-        await mongoose.connection.db.dropDatabase();//delete all items in database so dont use in projects
-        KPI.insertMany(kpis);
-        Product.insertMany(products);
-        Transaction.insertMany(transactions);
+        // await mongoose.connection.db.dropDatabase();//delete all items in database so dont use in projects
+        // KPI.insertMany(kpis);
+        // Product.insertMany(products);
+        // Transaction.insertMany(transactions);
     })
     .catch((error)=>console.log(`${error} did not connect`));
