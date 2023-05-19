@@ -32,7 +32,10 @@ app.use("/transaction",transactionRoutes);
 //mongoose setup
 const PORT=process.env.PORT || 9000;
 mongoose
-    .connect(process.env.MONGO_URL)
+    .connect(`${process.env.MONGO_URL}`,{
+        useNewUrlParser: true,
+        useUnifiedTopology:true,
+    })
     .then(async ()=>{
         app.listen(PORT,()=>console.log(`Server Port:${PORT}`));
         //add data one time only or as needed
