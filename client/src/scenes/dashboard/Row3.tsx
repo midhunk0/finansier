@@ -1,7 +1,7 @@
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } from "@/state/api";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";
 import { Box, Typography, useTheme } from "@mui/material";
 import { GridCellParams } from "@mui/x-data-grid/models";
 import FlexBetween from "@/components/FlexBetween";
@@ -168,7 +168,7 @@ const Row3 = () => {
                                 paddingAngle={2}
                                 dataKey="value"
                             >
-                                {data.map((entry, index) => (
+                                {data.map((_entry, index) => (
                                     <Cell key={`cell-${index}`} fill={pieColors[index]} />
                                 ))}
                             </Pie>
