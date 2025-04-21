@@ -1,3 +1,4 @@
+// @ts-nocheck
 import mongoose, { Schema } from "mongoose";
 import { loadType }  from "mongoose-currency";
 
